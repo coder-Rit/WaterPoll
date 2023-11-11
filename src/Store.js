@@ -2,13 +2,13 @@ import { applyMiddleware, combineReducers, legacy_createStore as createStore } f
 
 import thunk from "redux-thunk";
 
-import { networkReducer } from "./reducers/networkReducer";
+import { entriesReducer } from "./reducers/entriesReducer";
 
 import {composeWithDevTools} from 'redux-devtools-extension';
 import { alertReducer } from "./reducers/alertReducer";
 
 const combinedReducer = combineReducers({
-  network: networkReducer,
+  entries: entriesReducer,
   alert:alertReducer,
 });
 let initalState = {};

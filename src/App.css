@@ -1,9 +1,110 @@
 body{
   padding: 0;
   margin: 0;
-  background-color: #1f1f1f;
   
 }
 *{
   box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.floadingOBJ1{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(102, 0, 255, 0.177);
+  z-index: -1;
+  top: 180px;
+  left: 10px; 
+  box-shadow: -1px 0px 96px 16px rgba(102, 0, 255, 0.344);
+-webkit-box-shadow: -1px 0px 96px 16px rgba(102, 0, 255, 0.344);
+-moz-box-shadow: -1px 0px 96px 16px rgba(102, 0, 255, 0.344);
+}
+
+.floadingOBJ2{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: rgba(255, 115, 0, 0.166);
+  z-index: -1;
+  top: 230px;
+  right: 0; 
+  box-shadow: -1px 0px 96px 16px rgba(255, 115, 0, 0.391);
+-webkit-box-shadow: -1px 0px 96px 16px rgba(255, 115, 0, 0.391);
+-moz-box-shadow: -1px 0px 96px 16px rgba(255, 115, 0, 0.391);
+}
+
+.floadingOBJ3{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 255, 42, 0.113);
+  z-index: -1;
+  bottom: 200px;
+  left: 100px; 
+  box-shadow: -1px 0px 96px 16px rgba(0, 255, 42, 0.391);
+-webkit-box-shadow: -1px 0px 96px 16px rgba(0, 255, 42, 0.391);
+-moz-box-shadow: -1px 0px 96px 16px rgba(0, 255, 42, 0.391);
+}
+
+.floadingOBJ4{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 0, 128, 0.116);
+  z-index: -1;
+  top: 400px;
+  right: 30px;
+  box-shadow: -1px 0px 96px 16px rgba(255, 0, 128, 0.34);
+-webkit-box-shadow: -1px 0px 96px 16px rgba(255, 0, 128, 0.34);
+-moz-box-shadow: -1px 0px 96px 16px rgba(255, 0, 128, 0.34);
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-width: 900px;
+  height: 600px;
+  border: 2px solid #e91e63;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 75px;
+position: relative;
+
+
+  box-shadow: 2px 3px 22px -3px rgba(233,30,99,0.75);
+-webkit-box-shadow: 2px 3px 22px -3px rgba(233,30,99,0.75);
+-moz-box-shadow: 2px 3px 22px -3px rgba(233,30,99,0.75);
+  }
+
+
+  .addBtn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .getterBottom{
+    margin-top: 15px;
+  }
+  .getterBottom5{
+    margin-top: 5px;
+
+  }
