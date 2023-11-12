@@ -40,6 +40,33 @@ export const updateEntries = (entries,oldEntries) => async (dispatch) => {
 
 };
 
+export const getEntries = () => async (dispatch) => {
+
+
+  try {
+    dispatch({ type: UPDATE_ENTRIE_LIST_REQUEST });
+
+    const {data} = await axios.get("/api/v1/getEntreis")
+    console.log(data);
+
+    dispatch({ type: UPDATE_ENTRIE_LIST_SUCCESS, payload: data.data });
+   
+    
+  } catch (error) {
+    console.log(error );
+    
+    dispatch({ type: UPDATE_ENTRIE_LIST_FAIL, payload: error });
+    dispatch({
+      type: MAKE_ALERT,
+      payload1: 0,
+      payload2: error,
+    });
+  }
+
+
+
+};
+
 
 export const deleteNetwork = (id) => async (dispatch) => {
 

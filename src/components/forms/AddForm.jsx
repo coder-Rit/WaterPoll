@@ -17,10 +17,10 @@ const AddForm = () => {
 
   const { entries } = useSelector((state) => state.entries);
 
-  const [name, setName] = useState("123");
-  const [formOpen, setFormOpen] = useState(true);
+  const [name, setName] = useState("");
+  const [formOpen, setFormOpen] = useState(false);
   const [GroupCount, setGroupCount] = useState(0);
-  const [Hours, setHours] = useState(12);
+  const [Hours, setHours] = useState(1);
 
   const increment = () => {
     setGroupCount(GroupCount + 1);
@@ -50,7 +50,7 @@ const AddForm = () => {
     const currentTime = new Date(); // Get the current time
 
     const expireTime = new Date(
-      currentTime.getTime() + (Hours * 1000)
+      currentTime.getTime() + (Hours*60 * 1000)
     ); // Add 1 hour (in milliseconds)
 
     const expireTimeString = expireTime.toISOString();
@@ -59,7 +59,7 @@ const AddForm = () => {
       updateEntries({
         Name: name,
         Hours,
-        GroupCount,
+        GroupCount, 
         entrieAt: currentTime.toISOString(),
         exitAt:expireTimeString
       },entries)
